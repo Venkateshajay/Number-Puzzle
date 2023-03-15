@@ -1628,6 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noSprites:
+  - {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   - {fileID: 21300000, guid: bf045d842e71c0e4bb0b1a8693f37f1c, type: 3}
   - {fileID: 21300000, guid: 11b131ade3e293148a6c6d4a86d5d2dc, type: 3}
   - {fileID: 21300000, guid: b6cc9764fdfb12b49a65f64caf9a8aed, type: 3}
@@ -1643,7 +1644,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5768939fe7f345b40a943b4802602d4a, type: 3}
   - {fileID: 21300000, guid: 49c93c7dcbdc1684596f55de271950e7, type: 3}
   - {fileID: 21300000, guid: 250f2cde7f3b332448456ac0f45b62ae, type: 3}
-  - {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  victoryCanvas: {fileID: 0}
 --- !u!4 &1558407004
 Transform:
   m_ObjectHideFlags: 0

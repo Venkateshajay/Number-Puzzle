@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     //private bool moveAllowed = false;
     Vector2 touchPosition;
     [SerializeField] private Sprite[] noSprites = new Sprite[16];
+    [SerializeField] Canvas victoryCanvas; 
     void Start()
     {
         Shuffle(shuffledArray);
@@ -45,9 +46,11 @@ public class GameManager : MonoBehaviour
     }
     private bool CheckVictory()
     {
+        
         bool result = true;
         for(int i = 0; i < 16; i++)
         {
+            Debug.Log(orderOfNumbers[i]);
             if (!squares[i].GetComponent<Id>().Check())
             {
                 result = false;
@@ -60,7 +63,10 @@ public class GameManager : MonoBehaviour
     {
         ReadTouch();
         //AssignValues();
-        CheckVictory();
+        if (CheckVictory())
+        {
+            victoryCanvas.enabled = true;
+        }
     }
 
     private void swap()
