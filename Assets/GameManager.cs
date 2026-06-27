@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private GameObject[] squares = new GameObject[16];
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         bool result = true;
         for(int i = 0; i < 16; i++)
         {
-            Debug.Log(orderOfNumbers[i]);
+            //Debug.Log(orderOfNumbers[i]);
             if (!squares[i].GetComponent<Id>().Check())
             {
                 result = false;
@@ -149,5 +149,24 @@ public class GameManager : MonoBehaviour
             }
             squares[i].GetComponent<Id>().SetCurrentN0(shuffledArray[i]);
         }
+    }
+
+    public void ShuffleButton()
+    {
+        //Debug.Log("Shufled");
+        Shuffle(shuffledArray);
+        SetId();
+        AssignValues();
+        SpriteAssign();
+    }
+
+    public void quit()
+    {
+        Application.Quit();
+    }
+
+    public void RestartScence()
+    {
+        SceneManager.LoadScene(0);
     }
 }
